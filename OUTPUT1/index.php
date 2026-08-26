@@ -71,7 +71,7 @@
             <tr>
                 <td>Age</td>
                 <td>
-                    <input type="number" name="fname" placeholder="Enter First Name" required />
+                    <input type="number" name="age" placeholder="Enter First Name" required />
                 </td>
             </tr>
             <tr>
@@ -98,6 +98,7 @@
                     <input type="number" name="contact" placeholder="Enter First Name" required />
                 </td>
             </tr>
+
             <tr>
                 <td></td>
                 <td>

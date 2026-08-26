@@ -47,10 +47,38 @@
             </td>
         </tr>
         <tr>
-            <td>Last Name:</td>
+            <td>Age:</td>
             <td style="text-decoration: underline">
                 <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['lname'] : $_POST['lname'];?>
+                <?php echo ($req_type == '$_GET') ? $_GET['age'] : $_POST['age'];?>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td style="text-decoration: underline">
+                <!-- Use ternary operator to check if the request type is GET or POST -->
+                <?php echo ($req_type == '$_GET') ? $_GET['gender'] : $_POST['gender'];?>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td style="text-decoration: underline">
+                <!-- Use ternary operator to check if the request type is GET or POST -->
+                <?php echo ($req_type == '$_GET') ? $_GET['gender'] : $_POST['gender'];?>
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td style="text-decoration: underline">
+                <!-- Use ternary operator to check if the request type is GET or POST -->
+                <?php echo ($req_type == '$_GET') ? $_GET['address'] : $_POST['address'];?>
+            </td>
+        </tr>
+        <tr>
+            <td>Contact Number:</td>
+            <td style="text-decoration: underline">
+                <!-- Use ternary operator to check if the request type is GET or POST -->
+                <?php echo ($req_type == '$_GET') ? $_GET['contact'] : $_POST['contact'];?>
             </td>
         </tr>
     </table>

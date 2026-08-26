@@ -1,0 +1,316 @@
+:root {
+ --primary: #232f4b;
+ --accent: #381b07;
+ --emp: rgb(211, 140, 9);
+ --radius: 14px;
+ --sub: 20px;
+ --shadow: 0 12px 24px rgba(0,0,0,0.12);
+ --title-size: clamp(1.5rem, 4vw, 2.5rem);
+ 
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg,#381b07, #0b1731);
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button {
+    border: none;              
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-cart {
+    background-color: #381b07;
+    color: rgb(235, 239, 241);
+    position: relative;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(211, 140, 9, 0.2);
+    border-radius: 50%;
+    top: 20px;
+    left: 5%;
+    z-index: -1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(211, 140, 9, 0.3);
+    border-radius: 50%;
+    bottom: -80px;
+    right: 5%;
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: var(--title-size);
+
+}
+
+.hero-title span{
+    color:  var(--emp);
+}
+
+.hero-desc {
+  font-size: var(--sub);
+  margin: 0.1rem auto 2rem;
+  opacity: 0.9;
+}
+
+
+.shop-but {
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--emp);
+    color: white;
+    width: 150px;
+    font-size: 25px;
+    padding: 10px 16px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.6s ease, transform 0.6s ease;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}   
+
+.shop-but:hover {
+    background-color: var(--accent);
+    transform: translateY(-4px);
+
+
+}
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.filter-pill {
+    padding: 10px 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    background-color: var(--emp);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.filter-pill:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+
+.filter-pill.active {
+    background-color: var(--accent);
+    color: white;
+}
+
+
+.filter-pill:not(.active):hover {
+    transform: translateY(-3px);
+}
+
+
+.filter-pill:focus-visible {
+    outline: 3px solid blue;
+    outline-offset: 3px;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.product-card {
+    padding: 20px;
+    border: 1px solid var(--emp);
+    border-radius: 15px;
+    background-color: var(--accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #666;
+}
+
+.rating {
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8c1c1c !important;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #f9f8f8;
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+.cart-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    transform: translateY(-2px);
+}
+
+.site-footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #0b1731; 
+    font-size: 9px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+@media (max-width: 640px) {
+
+
+    .header {
+        margin: 10px;
+        gap: 10px;
+    }
+
+
+    .buttons button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+    }
+
+    .shop-but {
+        width: 140px;
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+
+    .filter-section {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filter-pill {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}

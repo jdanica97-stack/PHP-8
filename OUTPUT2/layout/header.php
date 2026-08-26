@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <title>JanTech</title>
+</head>
+<body>
+    <header class="header">
+    <div class="logo-group">
+        <img src="images/logo.jpg" width="50px" height="50px" style="border-radius: var(--radius);">
+        <h1 class="logo">JanTech</h1>
+    </div>
+    
+    <div class="buttons">
+        <button class="btn-login">Login</button>
+
+        <button class="btn-cart">🛒 Cart 3
+        </button>
+    </div>
+</header>

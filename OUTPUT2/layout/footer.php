@@ -1,6 +1,6 @@
-
 <footer class="site-footer">
-    <h1>JanCarl</h1>
+    <p>&copy; 2026 JanTech. All Rights Reserved.</p>
 </footer>
+
 </body>
 </html>

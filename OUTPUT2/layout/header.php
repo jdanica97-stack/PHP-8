@@ -9,16 +9,29 @@
     <title>JanTech</title>
 </head>
 <body>
-    <header class="header">
+   <header class="header">
+
     <div class="logo-group">
         <img src="images/logo.jpg" width="50px" height="50px" style="border-radius: var(--radius);">
         <h1 class="logo">JanTech</h1>
     </div>
-    
-    <div class="buttons">
-        <button class="btn-login">Login</button>
 
-        <button class="btn-cart">🛒 Cart 3
+    <div class="buttons">
+
+        <a href="index.php" class="btn-home">
+            Home
+        </a>
+
+        <a href="login.php" class="btn-login">
+            Login
+        </a>
+
+        <button class="btn-cart">
+            🛒 Cart 3
         </button>
+
     </div>
+
+</header>
+</div>
 </header>

@@ -1,12 +1,12 @@
 <?php
-    
-    if($_SERVER['REQUEST_METHOD'] === 'GET'){
-        $req_type = '$_GET';
-    }
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $req_type = '$_POST';
-    }
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $req_type = '$_GET';
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $req_type = '$_POST';
+}
 
 ?>
 
@@ -15,74 +15,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP Output No. 1</title>
-    <style>
-        body {
-            font-family: "Arial";
-        }
-    </style>
 </head>
+
 <body>
-    <h2>Data is sent here, and it is store at <?php echo $req_type; ?> variable</h2>
+
+<div class="redirect-container">
+
+    <h2>Submitted Data</h2>
+
+    <p>
+        Data is sent here, and it is stored at
+        <b><?php echo $req_type; ?></b> variable.
+    </p>
+
     <table>
         <tr>
-            <td width="120">First Name:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['fname'] : $_POST['fname']; ?>
-            </td>
+            <td>First Name:</td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['fname'] : $_POST['fname']; ?></td>
         </tr>
+
         <tr>
             <td>Middle Name:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['mname'] : $_POST['mname']; ?>
-            </td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['mname'] : $_POST['mname']; ?></td>
         </tr>
+
         <tr>
             <td>Last Name:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['lname'] : $_POST['lname'];?>
-            </td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['lname'] : $_POST['lname']; ?></td>
         </tr>
+
         <tr>
             <td>Age:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['age'] : $_POST['age'];?>
-            </td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['age'] : $_POST['age']; ?></td>
         </tr>
+
         <tr>
             <td>Gender:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['gender'] : $_POST['gender'];?>
-            </td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['gender'] : $_POST['gender']; ?></td>
         </tr>
+
         <tr>
-            <td>Gender:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['gender'] : $_POST['gender'];?>
-            </td>
+            <td>Email:</td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['email'] : $_POST['email']; ?></td>
         </tr>
+
         <tr>
             <td>Address:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['address'] : $_POST['address'];?>
-            </td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['address'] : $_POST['address']; ?></td>
         </tr>
+
         <tr>
             <td>Contact Number:</td>
-            <td style="text-decoration: underline">
-                <!-- Use ternary operator to check if the request type is GET or POST -->
-                <?php echo ($req_type == '$_GET') ? $_GET['contact'] : $_POST['contact'];?>
-            </td>
+            <td><?php echo ($req_type == '$_GET') ? $_GET['contact'] : $_POST['contact']; ?></td>
         </tr>
     </table>
-    <br><br>
+
     <a href="./">Return to Main Form</a>
+
+</div>
+
 </body>
 </html>
